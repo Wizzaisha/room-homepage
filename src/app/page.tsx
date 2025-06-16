@@ -1,14 +1,9 @@
-import { Footer } from "./ui/components/footer/footer";
-import { NavBar } from "./ui/components/navbar/navBar";
+import { getDataFromJSON } from "./lib/services/getDataService";
+import LandingPage from "./ui/components/landingPage/landingPage";
+import { LandingData } from "./ui/models/landing";
 
-export default function Home() {
-  return (
-    <div className="w-full min-h-dvh grid grid-rows-[auto_1fr_auto]">
-      <NavBar></NavBar>
+export default async function Home() {
+  const landingData = (await getDataFromJSON()) as LandingData[];
 
-      <h1>Hello</h1>
-
-      <Footer></Footer>
-    </div>
-  );
+  return <LandingPage landingData={landingData}></LandingPage>;
 }

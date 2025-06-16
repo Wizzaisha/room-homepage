@@ -5,7 +5,7 @@ import { ImageFooter1, ImageFooter2 } from "../../icons/png";
 export function Footer() {
   return (
     <div className="w-full grid xl:grid-cols-3 grid-cols-1 ">
-      <div className="relative w-full h-[300px]">
+      <div className="relative w-full h-[250px]">
         <Image
           src={ImageFooter1}
           alt="imageFooter1"
@@ -15,7 +15,7 @@ export function Footer() {
         />
       </div>
 
-      <div className="flex items-center justify-center xl:px-10 xl:py-0 py-15">
+      <div className="w-full xl:w-fit flex items-center justify-center py-15 px-10 xl:py-0 h-[250px]">
         <div className="max-w-prose">
           <h2 className="text-preset3-bold">ABOUT OUR FURNITURE</h2>
 
@@ -30,7 +30,7 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="relative w-full h-[300px]">
+      <div className="relative w-full h-[250px]">
         <Image
           src={ImageFooter2}
           alt="imageFooter2"
